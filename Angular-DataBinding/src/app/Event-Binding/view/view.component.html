@@ -1,0 +1,26 @@
+<h1>hello {{name}}</h1>
+<button (cick)='setName()'>Click</button>
+<br>
+<div>
+    <input type="text" #t1>
+    <button (cick)='Greet(t1.value)'>Greet</button>
+</div>
+<br>
+<div>
+    <select (change)="Greet(s1.value)"#s1>
+        <option value="Ajay">Ajay</option>
+        <option value="Kalyan">Kalyan</option>
+        <option value="Likith">Likith</option>
+        <option value="Katari">Katari</option>
+        
+    </select>
+</div>
+
+<div>
+   no1: <input type="text" #a1><br>
+    no2:<input type="text" #a2>
+    <button (click)='Add(a1.value,a2.value)'>Add</button>
+    <button (click)='Sub(a1.value,a2.value)'>Sub</button>
+    <h1>{{name}} {{no3}}</h1>
+    
+</div>

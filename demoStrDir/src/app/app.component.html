@@ -1,0 +1,38 @@
+
+<!--basic @ngFor command to display an array-->
+
+<h1>Customer Details</h1>
+<ul>
+  <li *ngFor="let cmr of Customer">
+    {{cmr.name}}  {{cmr.age}}  {{cmr.country}}
+  </li>
+</ul>
+<ul>
+  <!-- basic @ngFor command to display an Arrry with index-->
+  <li *ngFor="let cmr of Customer;let i=index">
+   {{i+1}}- {{cmr.name}}  {{cmr.age}}  {{cmr.country}}
+  </li>
+</ul>
+<!--Grouping-->
+<li *ngFor="let group of StudentbyCountry">
+  {{group.country}}
+  <ul>
+    <li *ngFor="let stdnt of group.student">
+      {{stdnt.name}} {{stdnt.age}}
+    </li>
+  </ul>
+</li>
+<h1>Customer Details</h1>
+<ul *ngFor="let cmr of Customer">
+  <li *ngIf="cmr.age<25" class="text-primary">
+    {{cmr.name}}  {{cmr.country}}
+  </li>
+
+</ul>
+<h1>Customer Details</h1>
+<ul *ngFor="let cmr of Customer" [ngSwitch="cmr.country"]>
+  <li *ngSwitchCase="'india'" class="text-primary"> {{cmr.name}}</li>
+  <li *ngSwitchCase="'Africa'" class="text-danger"> {{cmr.name}}</li>
+  <li *ngSwitchDefault> {{cmr.name}}</li>
+  
+</ul>

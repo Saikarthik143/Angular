@@ -1,0 +1,45 @@
+<div>
+    <table>
+        <tr>
+            <td>Eid:</td>
+            <td><input type="text" [(ngModel)]="Item.eid"></td>
+        </tr>
+        <tr>
+            <td>EmployeeName:</td>
+            <td><input type="text" [(ngModel)]="Item.ename"></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="date" [(ngModel)]="Item.joindate"></td>
+        </tr>
+        <tr>
+            <td>Designation:</td>
+            <td>
+                <select [(ngModel)]='Item.designation'>
+                    <option>Programmer</option>
+                    <option>ProjectLead</option>
+                    <option>Manager</option>
+                    <option>CEO</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><input type="text" [(ngModel)]="Item.salary"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)='Add()'>Regisyter</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <pre>
+        Id:{{Item.eid}}
+        Name:{{Item.ename}}
+        Joindate{{Item.joindate}}
+        designation :{{Item.designation}}
+        Salary:{{Item.salary}}
+    </pre>
+</div>
